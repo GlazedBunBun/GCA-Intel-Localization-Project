@@ -12,7 +12,8 @@ This project was created as a student of the Global Career Accelerator (GCA) pro
   * At the time I did not record a personal history of how I may have utilized AI, so the breakdown is from the best of my memory in level of certainty.
 * **Github Copilot Usage**: Minimal
   * Debugging (certain)
-  * Image generation (certain)
   * Format tweaks (most certain)
+* **OpenAI ChatGPT**: Minimal
+  * Image generation (certain)
 * **Microsoft Copilot**: Minimal
   * Image generation (certain) 
