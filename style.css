@@ -1,0 +1,350 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ececec;
+  font-family: "quicksand", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: linear-gradient(to right, #0071c5, #6cd8ff);
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 20em;
+  height: 100vh;
+}
+
+header div {
+  max-width: 600px;
+}
+
+.fade-in {
+  opacity: 0;
+  transition:
+    opacity 2.0s;
+}
+
+header div input.fade-in{
+  opacity: 0;
+  transition-delay: 0.5s;
+}
+
+header div h1.fade-in, header div p.fade-in {
+  opacity: 0;
+  transition-delay: 0.3s;
+}
+
+.fade-in.loaded {
+  opacity: 1;
+}
+
+header div input {
+  background: linear-gradient(to right, #00c7fd, #00bbff);
+  color: white;
+  font-size: 1.5em;
+  margin: 50px;
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+header div input:hover {
+  background: linear-gradient(to right, #00a3e0, #0071c5);
+  scale: 1.05;
+}
+
+header div img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+main {
+  color: rgb(68, 68, 68);
+  width: 100%;
+  margin: 100px auto;
+  text-align: center;
+}
+
+main h1 {
+  color:#0071c5;
+  font-size: 2.5em;
+}
+
+/*timeline*/
+
+#timeline {
+  background: #222222;
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  flex-flow: row nowrap;
+  overflow-x: auto;
+  justify-content: flex-start;
+  align-items: center;
+  scroll-snap-stop: normal;
+  scroll-snap-type: x mandatory;
+}
+
+.timeline-card {
+  background: #f0f0f0;
+  border-radius: 10px;
+  width: 300px;
+  height: 300px;
+  padding: 20px;
+  margin: 20px;
+  position: relative;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+  scroll-snap-align: center;
+}
+
+.timeline-card h3 {
+  font-size: 1.5em;
+}
+
+.timeline-card img {
+  width: 250px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.text-overlay {
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  align-items: center;
+  opacity: 0;
+  z-index: 2;
+  transition: all 0.2s;
+}
+
+.text-overlay:hover {
+  background: linear-gradient(to bottom,#3b3b3b 50%, #3b3b3b76 100%);
+  color: white;
+  width: 100%;
+  height: 100%;
+  outline: 6px solid #3b3b3b;
+  outline-offset: -6px;
+  opacity: 1;
+}
+
+.text-overlay p {
+  margin: 20px;
+}
+
+/*Column section*/
+
+#content-section{
+  background: #e8e8e8;
+  margin: 8em 0;
+  padding: 2em 8em;
+}
+
+.column{
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  font-weight: 150;
+  padding: 3em;
+  text-align: start;
+}
+
+.column:nth-child(even) {
+  background: #0071c5;
+  color: white;
+}
+
+.column a {
+  background: #0071c5;
+  color: white;
+  padding: 10px 10%;
+  text-decoration: none;
+}
+
+.column:nth-child(even) a {
+  background: white;
+  color: #0071c5;
+}
+
+.column a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.column:nth-child(even) a:hover {
+  color: #0071c5;
+}
+
+.icon-container {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3em;
+}
+
+.icon {
+  font-size: 100px;
+}
+
+#form-container {
+  background: linear-gradient(to top, #010042,  black);
+  height: 30em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#form-cap {
+  color: white;
+  font-size: 35px;
+  text-align: start;
+  width: 30%;
+  padding: 1em;
+}
+
+#form {
+  background: white;
+  margin: 10em 5em;
+  padding: 4em;
+}
+
+#form h2 {
+  color: rgb(0, 21, 128);
+}
+
+#form div label {
+  color: black;
+}
+
+form{
+  text-align: start;
+}
+
+form input{
+  width: 100%;
+}
+
+form button {
+  background: white;
+  color: #010042;
+  max-width: 50%;
+  height: 40px;
+  border: 1px solid #010042;
+}
+
+form button:hover {
+  background: #010042;
+  color: white;
+  transition-duration: 0.25s;
+}
+
+#news-modal {
+  text-align: start;
+}
+
+footer {
+  background: #3b3b3b;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5em;
+  padding: 1em;
+  height: 10em;
+}
+
+footer div a {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  margin: 10px;
+}
+
+footer div a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+footer img {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 1em 2em;
+    height: 100vh;
+  }
+
+  header div {
+    max-width: 100%;
+  }
+
+  header div input {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+
+  #timeline {
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .timeline-card {
+    width: 80%;
+    margin: 10px;
+  }
+
+  .timeline-card img {
+    width: 100%;
+  }
+
+  #content-section{
+  padding: 1em;
+}
+
+  #form-container {
+    height: auto;
+    flex-flow: column;
+  }
+
+  #form {
+    margin: 2em;
+    padding: 2em;
+    width: 100%;
+  }
+
+  #form-cap {
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+  }
+
+  form button{
+    width: 100%;
+    max-width: 100%;
+  }
+
+  footer{
+    height: auto;
+  }
+
+}
